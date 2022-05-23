@@ -1,61 +1,27 @@
 import "./App.css";
 import {
   Oppgave1,
-  Oppgave2,
-  Oppgave3,
-  Oppgave4,
-  Oppgave5,
-  Bonus,
-} from "./oppgaver";
+} from "./Oppgaver";
 import {
   Fasit1,
-  Fasit2,
-  Fasit3,
-  Fasit4,
-  Fasit5,
-  Bonus as BonusFasit,
-} from "./fasit";
-import { Eksempel1, Eksempel2a, Eksempel2b, Eksempel3 } from "./eksempler";
-import { CenteredContent } from "./CenteredContent";
+} from "./Fasit";
+import { Eksempel1 } from "./Eksempler";
 
 function Fasit() {
   return (
-    <>
-      <CenteredContent>
-        {/* <Fasit1 /> */}
-        {/* <Fasit2 /> */}
-      </CenteredContent>
-      {/* <Fasit3 /> */}
-      {/* <Fasit4 /> */}
-      {/* <Fasit5 /> */}
-      {/* <BonusFasit /> */}
-    </>
+      <Fasit1 />
   );
 }
 
 function Eksempler() {
   return (
-    <CenteredContent>
-      {/* <Eksempel1 /> */}
-      {/* <Eksempel2a /> */}
-      {/* <Eksempel2b /> */}
-      {/* <Eksempel3 /> */}
-    </CenteredContent>
+      <Eksempel1 />
   );
 }
 
 function Oppgaver() {
   return (
-    <>
-      <CenteredContent>
-        {/* <Oppgave1 /> */}
-        <Oppgave2 />
-      </CenteredContent>
-      {/* <Oppgave3 /> */}
-      {/* <Oppgave4 /> */}
-      {/* <Oppgave5 /> */}
-      {/* <Bonus /> */}
-    </>
+      <Oppgave1 />
   );
 }
 
