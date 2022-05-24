@@ -21,6 +21,9 @@ function Example({ repo }) {
     const [error, setError] = useState(undefined)
     const [data, setData] = useState();
 
+    // Oppgave 1: Lag en useEffect som henter data fra https://api.github.com/repos
+    // Hjelpefunksjon: await axios.get(`https://api.github.com/repos/${repo}`).then((res) => res.data)
+    // Ta hensyn til loading, error, og når datahentingen er vellykket og du kan vise data
     useEffect(() => {
       const asyncFecther = async () => {
           if (!repo) return
@@ -33,7 +36,11 @@ function Example({ repo }) {
       asyncFecther();
   }, [repo]);
 
-  if (!repo) return <p>No repo chosen</p>
+  // Oppgave 2: Ta hensyn til at repo-verdien kan være undefined,
+  // Altså ikke kall endepunktet før brukeren har valgt et repo
+  // Ikke lov å jukse å endre default-verdien til hooken her 😏
+  // Kommenter inn linjen under når det er fikset. 
+  // if (!repo) return <p>No repo chosen</p>
 
   if (isLoading) return <p>Loading...</p>;
 

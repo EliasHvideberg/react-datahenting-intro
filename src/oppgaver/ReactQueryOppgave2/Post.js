@@ -3,16 +3,20 @@ import axios from "axios";
 import { useQuery } from "react-query";
 
 function usePost(postId) {
-    return useQuery(["post", postId], () => axios.get(`https://jsonplaceholder.typicode.com/posts/${postId}`).then((res) => res.data));
+    // Returner det du får fra useQuery her (Oppgave 7)
+    return {}
 }
 
-  
 export function Post({ postId, setPostId }) {
-    const { status, data, error, isFetching } = usePost(postId)
+    // Oppgave 7: Lag en spørring ved hjelp av react query
+    // til å hente data fra https://jsonplaceholder.typicode.com/posts/${postId}
+    // Legg datahenting-logikken i custom-hooken som heter usePost()
+    // Finn en passende queryKey og queryFunction
+    // PS: Kommenter inn isFetching-informasjonen i visningen når du har verdien du trenger.
+    const {} = usePost(postId)
 
-    if (status === 'loading') return <p>Loading...</p>
-    if (status === 'error') return <p>Error: {error.message}</p>
-  
+    // Oppgave 8: Ta hensyn til loading og error og gi en passende melding til brukeren
+
     return (
         <div>
             <a onClick={() => setPostId()} href="#">Back</a>
@@ -20,7 +24,7 @@ export function Post({ postId, setPostId }) {
             <h1>{data.title}</h1>
             <p>{data.body}</p>
             
-            <span>{isFetching ? "Background Updating..." : " "}</span>
+            {/* <span>{isFetching ? "Background Updating..." : " "}</span> */}
         </div>
     );
 }
