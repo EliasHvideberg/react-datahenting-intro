@@ -37,3 +37,8 @@
     transform: rotate(360deg);
   }
 }
+
+.visited-link {
+  color: green;
+  font-weight: bold;;
+}
