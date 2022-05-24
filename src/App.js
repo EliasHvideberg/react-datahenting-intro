@@ -1,6 +1,8 @@
 import "./App.css";
 import {
   Oppgave1,
+  ReactQueryOppgave1,
+  ReactQueryOppgave2,
 } from "./Oppgaver";
 import {
   Fasit1,
@@ -21,17 +23,17 @@ function Eksempler() {
 
 function Oppgaver() {
   return (
-      <Oppgave1 />
+      <ReactQueryOppgave2 />
   );
 }
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Eksempler />
       <Oppgaver />
       <Fasit />
-    </>
+    </div>
   );
 }
 
