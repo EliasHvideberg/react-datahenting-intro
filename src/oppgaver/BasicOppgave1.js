@@ -26,11 +26,7 @@ function Example({ repo }) {
     // Ta hensyn til loading, error, og når datahentingen er vellykket og du kan vise data
     useEffect(() => {
       const asyncFecther = async () => {
-          if (!repo) return
-          setIsLoading(true)
-          const newData = await axios.get(`https://api.github.com/repos/${repo}`).then((res) => res.data).catch((e) => setError(e))
-          setData(newData);
-          setIsLoading(false)
+          
       }
 
       asyncFecther();
@@ -42,9 +38,9 @@ function Example({ repo }) {
   // Kommenter inn linjen under når det er fikset. 
   // if (!repo) return <p>No repo chosen</p>
 
-  if (isLoading) return <p>Loading...</p>;
+  // if (isLoading) return <p>Loading...</p>;
 
-  if (error || !data) return <p>An error has occurred</p>
+  // if (error || !data) return <p>An error has occurred</p>
 
   return (
     <div>
