@@ -1,8 +1,10 @@
 import "./App.css";
 import {
+  BasicOppgave1,
   Oppgave1,
   ReactQueryOppgave1,
   ReactQueryOppgave2,
+  ReactQueryOppgave3,
 } from "./Oppgaver";
 import {
   Fasit1,
@@ -30,9 +32,9 @@ function Oppgaver() {
 function App() {
   return (
     <div className="App">
-      <Eksempler />
+      {/* <Eksempler /> */}
       <Oppgaver />
-      <Fasit />
+      {/* <Fasit /> */}
     </div>
   );
 }
