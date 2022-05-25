@@ -1,3 +1,4 @@
-import { Fasit1 } from "./Fasit1";
+import { SWRFasit1 } from "./SWRFasit1";
+import { SWRFasit2 } from "./SWRFasit2";
 
-export { Fasit1 };
+export { SWRFasit1, SWRFasit2 };

@@ -5,15 +5,21 @@ import {
   ReactQueryOppgave1,
   ReactQueryOppgave2,
   ReactQueryOppgave3,
-} from "./Oppgaver";
+  SWRoppgave1,
+  SWRoppgave2,
+} from "./oppgaver";
 import {
-  Fasit1,
-} from "./Fasit";
-import { Eksempel1 } from "./Eksempler";
+  SWRFasit1,
+  SWRFasit2,
+} from "./fasit";
+import { Eksempel1 } from "./eksempler";
 
 function Fasit() {
   return (
-      <Fasit1 />
+      <>
+        {/* <SWRFasit1 /> */}
+        {/* <SWRFasit1 /> */}
+      </>
   );
 }
 
@@ -25,7 +31,12 @@ function Eksempler() {
 
 function Oppgaver() {
   return (
-      <ReactQueryOppgave2 />
+      
+      <>
+        {/* <ReactQueryOppgave2 /> */}
+        {/* <SWRoppgave1 /> */}
+        {/* <SWRoppgave2 /> */}
+      </>
   );
 }
 
